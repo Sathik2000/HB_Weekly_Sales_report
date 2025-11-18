@@ -20,8 +20,8 @@ body, html {
 
 /* HEADER */
 .header {
-    display: flex; /* row layout */
-    flex-direction: row; /* logo left, title right */
+    display: flex;
+    flex-direction: row; /* row layout */
     align-items: center;
     justify-content: center;
     padding: 10px 15px;
@@ -31,21 +31,35 @@ body, html {
     position: relative;
 }
 
+/* Hide original image */
 .header img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+    display: none;
 }
+
+/* Optionally add new logo via CSS */
+/* Uncomment and set URL if you want a new logo */
+/*
+.header::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('new-logo.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+*/
 
 /* Design font for the header title */
 .header h1 {
-    font-family: 'Pacifico', cursive; /* fancy font */
+    font-family: 'Pacifico', cursive;
     font-size: 2.2em;
     margin: 0;
     font-weight: 400;
-    text-align: left; /* align text left next to logo */
-    color: #ffd700; /* optional golden color */
+    text-align: left;
+    color: #ffd700;
 }
 
 /* Gradient underline */
@@ -203,7 +217,7 @@ footer::before {
 /* RESPONSIVE HEADER */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; /* stack logo above title on small screens */
+        flex-direction: column;
         gap: 10px;
     }
     .header h1 {
