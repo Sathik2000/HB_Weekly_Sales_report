@@ -6,7 +6,7 @@
 <title>Home Bakery - Weekly Sales Performance</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 /* BODY & BACKGROUND */
@@ -31,33 +31,28 @@ body, html {
     position: relative;
 }
 
-/* Hide original image */
-.header img {
-    display: none;
-}
-
-/* Optionally add new logo via CSS */
-/* Uncomment and set URL if you want a new logo */
-/*
-.header::before {
-    content: "";
-    display: block;
+/* HB LOGO */
+.hb-logo {
     width: 60px;
     height: 60px;
-    background-image: url('new-logo.png'); 
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #ffd700, #ff6b4a);
     border-radius: 50%;
-    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1a237e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-*/
 
-/* Design font for the header title */
+/* Header Title */
 .header h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.2em;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.4em;
     margin: 0;
-    font-weight: 400;
+    font-weight: 700;
     text-align: left;
     color: #ffd700;
 }
@@ -131,14 +126,12 @@ body, html {
     height: 2.3em;
 }
 
-/* Highlighted text color */
 .highlight {
     color: #d4af37;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-/* Blue text for SALES PERFORMANCE */
 .analysis-text {
     color: #1a237e;
     text-transform: uppercase;
@@ -156,12 +149,11 @@ body, html {
     100% { transform: translateX(-100%); }
 }
 
-/* Pause scroll on hover */
 .section-title:hover .scrolling-text {
     animation-play-state: paused;
 }
 
-/* Gradient underline */
+/* Underline */
 .section-title::after {
     content: '';
     display: block;
@@ -172,7 +164,7 @@ body, html {
     border-radius: 3px;
 }
 
-/* IFRAME STYLING */
+/* IFRAME */
 .iframe-wrapper {
     position: relative;
     z-index: 1;
@@ -230,7 +222,7 @@ footer::before {
 
 <!-- HEADER -->
 <div class="header">
-    <img src="Home Bakery Logo.jpeg" alt="Home Bakery Logo">
+    <div class="hb-logo">HB</div>
     <h1>HOME BAKERY</h1>
 </div>
 
